@@ -17,9 +17,11 @@ const texts = [
 	}
 ];
 
+
+
 const btnsNodeList = document.querySelectorAll('.btns button');
 
-btnsNodeList.forEach(elem => {
+/*btnsNodeList.forEach(elem => {
     elem.addEventListener('click', event => {
         const btnIndex = [...btnsNodeList].indexOf(event.target);
         const text = texts.find(({id}) => id === btnIndex + 1).text; 
@@ -27,6 +29,17 @@ btnsNodeList.forEach(elem => {
         currentTextNode.innerText = text;
 
     })
+})*/
+
+const btnsContainer = document.querySelector('.btn_container');
+const currentTextNode = document.querySelector('.current_text');
+texts.forEach(textObj => {
+	const btn = document.createElement('button');
+	btn.textContent = 'Текст' + textObj.id;
+	btn.addEventListener('click', () => {
+		currentTextNode.innerText = textObj.text;
+	});
+	btnsContainer.append(btn);
 })
 
 const leftButtonNode = document.getElementById('left-btn');

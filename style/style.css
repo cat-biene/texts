@@ -20,10 +20,12 @@
     border: 2px solid black;
 }
 
-.btns{
+.btn_container{
     display: flex;
     justify-content: space-between;
     border: 2px solid black;
+    padding: 0 5px;
+    width: 100%;
 }
 
 .btn{
@@ -35,7 +37,6 @@
     position: absolute;
     bottom: 0;
     left: 67%; 
-
 }
 
 .btn button{
